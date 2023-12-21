@@ -1,3 +1,4 @@
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -69,7 +70,8 @@ video{
   box-shadow: 0 0 3px wheat;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.5rem;
+  font-family: "Itacha", sans-serif;
   transition: all 0.5s ease;
 }
 .time-select button:hover,
@@ -85,7 +87,7 @@ video{
   width: 120px;
   padding: 30px;
 }
-.sound-picker button:nth-child(1){ /* seleziona il contenitoree figlio specificato tra parentesi*/
+.sound-picker button:nth-child(1){
   background: #4972a1;
 }
 .sound-picker button:nth-child(2){
