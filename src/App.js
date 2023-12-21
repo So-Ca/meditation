@@ -34,7 +34,7 @@ function App() {
 
 // Selezione dei suoni
   function changeSound(event){
-    const sounds = document.querySelectorAll(".sound-picker button");
+    // const sounds = document.querySelectorAll(".sound-picker button");
     const song = document.querySelector(".song");
     const video = document.querySelector(".vid-container video");
     const selectedButton = event.currentTarget;
@@ -87,7 +87,7 @@ function App() {
 
   useEffect( ()=>{
     moveOutline()
-  }, [] );
+  }, [moveOutline] );
 
   return (
     <div className='app'>
