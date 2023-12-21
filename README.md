@@ -6,7 +6,8 @@
   Thi app can be used to take few minutes to take a brake and relax 
 </p>
 
-![Screenshot_20231215_165641](https://github.com/So-Ca/meditation/assets/121359947/095a364d-07ab-4236-9fed-d2a95b6408c4)
+![Screenshot_20231221_124627](https://github.com/So-Ca/meditation/assets/121359947/08377669-8719-4e52-a650-228965a3af91)
+
 
   <h3>table of contents</h3>
   <ul>
@@ -26,6 +27,6 @@
   <a name="contacts"></a>
   <h3>Contacts</h3>
 
-  <a href="">Meditation</a><br>
+  <a href="https://meditation-example.netlify.app/">Meditation</a><br>
   <a href="so-ca-portfolio.netlify.app">Portfolio</a><br>
   <a href="https://www.linkedin.com/in/sonny-caputo-554315185">Likedin</a><br>
