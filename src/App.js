@@ -55,39 +55,39 @@ function App() {
   }
 
 // Animazione del cerchio
-  function moveOutline(){
-    const song = document.querySelector(".song");
-    const play = document.querySelector(".play");
-    const video = document.querySelector(".vid-container video");
-    const timeDisplay = document.querySelector(".time-display");
-    const outline = document.querySelector(".moving-outline circle");
-    const outlineLength = outline.getTotalLength();
-
-    outline.style.strokeDasharray = outlineLength; // spazia il cerchio nella misura indicata
-    outline.style.strokeDashoffset = outlineLength; // riempie il cerchio della misura indicata
-
-    song.ontimeupdate = () => {
-      let currentTime = song.currentTime;
-      let elapsed = fakeDuration - currentTime;
-      let seconds = Math.floor(elapsed % 60);
-      let minutes = Math.floor(elapsed / 60);
-      let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
-      
-      outline.style.strokeDashoffset = progress;
-      timeDisplay.textContent = `${minutes}:${seconds}`;
-
-      if(currentTime >= fakeDuration) {
-        song.pause();
-        video.pause();
-        song.currentTime = 0;
-        play.src = playSvg;
+  useEffect( ()=>{
+    function moveOutline(){
+      const song = document.querySelector(".song");
+      const play = document.querySelector(".play");
+      const video = document.querySelector(".vid-container video");
+      const timeDisplay = document.querySelector(".time-display");
+      const outline = document.querySelector(".moving-outline circle");
+      const outlineLength = outline.getTotalLength();
+  
+      outline.style.strokeDasharray = outlineLength; // spazia il cerchio nella misura indicata
+      outline.style.strokeDashoffset = outlineLength; // riempie il cerchio della misura indicata
+  
+      song.ontimeupdate = () => {
+        let currentTime = song.currentTime;
+        let elapsed = fakeDuration - currentTime;
+        let seconds = Math.floor(elapsed % 60);
+        let minutes = Math.floor(elapsed / 60);
+        let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
+        
+        outline.style.strokeDashoffset = progress;
+        timeDisplay.textContent = `${minutes}:${seconds}`;
+  
+        if(currentTime >= fakeDuration) {
+          song.pause();
+          video.pause();
+          song.currentTime = 0;
+          play.src = playSvg;
+        }
       }
     }
-  }
 
-  useEffect( ()=>{
     moveOutline()
-  }, [moveOutline] );
+  }, [] );
 
   return (
     <div className='app'>
