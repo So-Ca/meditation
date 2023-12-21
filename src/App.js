@@ -87,7 +87,7 @@ function App() {
     }
 
     moveOutline()
-  }, [] );
+  }, [fakeDuration] );
 
   return (
     <div className='app'>
